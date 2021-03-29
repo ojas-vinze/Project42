@@ -7,8 +7,8 @@ var score=0;
 var END=0;
 var PLAY=1;
 var gameState = PLAY;
-var foodg = new Group();
-var obstacleg = new Group();
+var foodg
+var obstacleg
 
 function preload(){
   bgimg=loadImage("jungle.jpg");
@@ -76,9 +76,9 @@ function draw() {
             obstacleg.destroyEach();
 
             textSize(30);
-            fill(255);
-            text("Game Over",300,220);
-          }
+            fill("black");
+            text("Game Over!",300,220);
+          } 
 
   drawSprites();
 }
