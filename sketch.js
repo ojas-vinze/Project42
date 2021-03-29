@@ -47,16 +47,15 @@ function draw() {
       backgr.x=backgr.width/2;
     }
     
-      if(keyDown("space") ) {
-        player.velocityY = -12;
-      }
-      player.velocityY = player.velocityY + 0.8;
-    
-      player.collide(ground);
+    if(keyDown("space") ) {
+      player.velocityY = -12;
+    }
+    player.velocityY = player.velocityY + 0.8;
+  
+    player.collide(ground);
     
 
-    text("Score: "+ score,750,30);
-
+    
     spawnfood();
     spawnobstacles();
     if(player.isTouching(foodg)){
@@ -64,6 +63,9 @@ function draw() {
       score = score+2;
       player.scale+= +0.1;
     }
+    textSize(30);
+    fill("black");
+    text("Score: "+ score,20,30);
 
     if(player.isTouching(obstacleg)){
       gameState=END;
@@ -77,7 +79,7 @@ function draw() {
 
             textSize(30);
             fill("black");
-            text("Game Over!",300,220);
+            text("Game Over!",width/2,220);
           } 
 
   drawSprites();
