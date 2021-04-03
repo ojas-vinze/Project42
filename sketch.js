@@ -63,9 +63,6 @@ function draw() {
       score = score+2;
       player.scale+= +0.1;
     }
-    textSize(30);
-    fill("black");
-    text("Score: "+ score,20,30);
 
     if(player.isTouching(obstacleg)){
       gameState=END;
@@ -78,11 +75,15 @@ function draw() {
             obstacleg.destroyEach();
 
             textSize(30);
-            fill("black");
+            fill("white");
             text("Game Over!",width/2,220);
           } 
 
   drawSprites();
+
+  textSize(30);
+  fill("white");
+  text("Score: "+ score,20,30);
 }
   
 
