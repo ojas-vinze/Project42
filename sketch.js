@@ -40,6 +40,7 @@ function setup() {
 
 function draw() { 
   background(0);
+  drawSprites();
 
   if(gameState===PLAY){
   
@@ -76,11 +77,8 @@ function draw() {
 
             textSize(30);
             fill("white");
-            text("Game Over!",width/2,220);
+            text("Game Over!",width/2-70,200);
           } 
-
-  drawSprites();
-
   textSize(30);
   fill("white");
   text("Score: "+ score,20,30);
